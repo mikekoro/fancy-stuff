@@ -1,4 +1,5 @@
 import React from "react";
+import css from './ForkPeeker.module.scss';
 
 /**
  * Displays the list of forks
@@ -21,7 +22,7 @@ const ForkPeeker = ({forks,peeked}) => {
                         <a href={fork.html_url} target="_blank" rel="noopener noreferrer">
                             <img 
                                 src={fork.owner.avatar_url} 
-                                className="avatar rounded-circle" 
+                                className={[css['avatar'], 'rounded-circle'].join(' ')}
                                 alt="github user avatar"
                             />
                         </a>

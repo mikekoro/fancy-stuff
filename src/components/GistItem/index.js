@@ -3,6 +3,7 @@ import { lookupForks } from '../../helpers/lookupForks';
 import LoadingState from './../Misc/LoadingState';
 import ParseFileTypes from './../Misc/ParseFileTypes';
 import ForkPeeker from './../Misc/ForkPeeker';
+import css from './style.module.scss';
 
 /**
  * Display basic Gist info including Gist description & forks
@@ -34,7 +35,7 @@ const GistItem = ({gist}) => {
 
     return (
         <Fragment>
-            <h5 className="font-weight-bold">
+            <h5 className={[css['some-useless-css-rule'], 'font-weight-bold'].join(' ')}>
                 {gist.description ? gist.description : 'Unnamed Gist'}
             </h5>
             <ParseFileTypes 
