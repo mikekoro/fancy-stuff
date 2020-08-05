@@ -33,9 +33,10 @@ const Home = () => {
             return;
         }
         if(response.data.length === 0) {
-            setEmpty(true); // enable empty state
+            setEmpty(true); // enable empty state if no results were returned
+        } else {
+            setGists(response.data); // populate the list of Gists
         }
-        setGists(response.data); // populate the list of Gists
         setLoading(false); // remove loading indicator
 
     }
