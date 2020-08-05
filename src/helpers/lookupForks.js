@@ -17,7 +17,7 @@ export const lookupForks = async (forks_url,limit) => {
             // if limit is passed, filter accordingly
             const altered_response = {
                 ...response,
-                data: response.data.slice(Math.max(response.data.length - 3, 0))
+                data: response.data.slice(Math.max(response.data.length - limit, 0))
             }
             return [null,altered_response];
         }
