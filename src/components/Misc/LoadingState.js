@@ -5,11 +5,13 @@ import React from "react";
  * @param {boolean} isLoading should the loading thingy be displayed
  * @param {string} message custom message
  */
-const LoadingState = ({isLoading,message}) => {
-    if(!isLoading) return null;
-    return (
-        <div data-testid="loading-state" className="text-center">{message}</div>
-    )
-}
+const LoadingState = ({ isLoading, message }) => {
+  if (!isLoading) return null;
+  return (
+    <div data-testid="loading-state" className="text-center">
+      {message}
+    </div>
+  );
+};
 
 export default LoadingState;
